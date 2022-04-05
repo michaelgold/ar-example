@@ -6,18 +6,80 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-face-aframe.prod.js"></script>
   </head>
   <body>
-    <a-scene mindar-face embedded color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+    <a-scene
+      mindar-face
+      embedded
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
       <a-assets>
-	<a-asset-item id="glassesModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/face-tracking/assets/glasses/scene.gltf"></a-asset-item>
-	<a-asset-item id="headModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/face-tracking/assets/sparkar/headOccluder.glb"></a-asset-item>
+        <a-asset-item id="Mask" src="./asset/MASK2.glb"></a-asset-item>
+        <a-asset-item id="Emoji" src="./asset/emoji1.glb"></a-asset-item>
+        <a-asset-item id="EmojiAnim" src="./asset/emoji2.glb"></a-asset-item>
+        <a-asset-item
+          id="headModel"
+          src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/examples/face-tracking/assets/sparkar/headOccluder.glb"
+        ></a-asset-item>
       </a-assets>
-
       <a-camera active="false" position="0 0 0"></a-camera>
       <a-entity mindar-face-target="anchorIndex: 168">
-        <a-gltf-model mindar-face-occluder position="0 -0.3 0.15"rotation="0 0 0" scale="0.065 0.065 0.065" src="#headModel"></a-gltf-model>
+        <a-gltf-model
+          mindar-face-occluder
+          position="0 -0.3 0.15"
+          rotation="0 0 0"
+          scale="0.065 0.065 0.065"
+          src="#headModel"
+        ></a-gltf-model>
       </a-entity>
       <a-entity mindar-face-target="anchorIndex: 168">
-        <a-gltf-model rotation="0 0 0" position="0 0 0" scale="0.01 0.01 0.01" src="#glassesModel"></a-gltf-model>
+        <a-gltf-model
+          rotation="0 0 0"
+          position="-0.6 0.6 0"
+          scale="0.2 0.2 0.2"
+          src="#Emoji"
+        ></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-face-target="anchorIndex: 168">
+        <a-gltf-model
+          rotation="0 0 0"
+          position="-0.8 0.2 0"
+          scale="0.2 0.2 0.2"
+          src="#Emoji"
+        ></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-face-target="anchorIndex: 168">
+        <a-gltf-model
+          rotation="0 -90 0"
+          position="0 0.8 0"
+          scale="0.5 0.5 0.5"
+          src="#EmojiAnim"
+        ></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-face-target="anchorIndex: 168">
+        <a-gltf-model
+          rotation="0 0 0"
+          position="0.6 0.6 0"
+          scale="0.2 0.2 0.2"
+          src="#Emoji"
+        ></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-face-target="anchorIndex: 168">
+        <a-gltf-model
+          rotation="0 0 0"
+          position="0.8.2 0"
+          scale="0.2 0.2 0.2"
+          src="#Emoji"
+        ></a-gltf-model>
+      </a-entity>
+      <a-entity mindar-face-target="anchorIndex: 168">
+        <a-gltf-model
+          rotation="0 0 0"
+          position="0 -0.2 0"
+          scale="1.5 1.5 1.5"
+          src="#Mask"
+        ></a-gltf-model>
       </a-entity>
     </a-scene>
   </body>
