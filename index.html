@@ -4,6 +4,8 @@
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-face.prod.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.1.4/dist/mindar-face-aframe.prod.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
   </head>
   <body>
     <a-scene
@@ -51,6 +53,7 @@
       </a-entity>
       <a-entity mindar-face-target="anchorIndex: 168">
         <a-gltf-model
+          animation-mixer
           rotation="0 -90 0"
           position="0 0.8 0"
           scale="0.5 0.5 0.5"
